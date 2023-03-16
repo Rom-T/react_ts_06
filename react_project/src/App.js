@@ -1,15 +1,13 @@
-import { useState } from 'react'
+import { useState } from 'react';
+import { Button, Display } from "./components";
 
 const App = () => {
 
-  const Display = ({counter}) => <div>{counter}</div>
-  const Button = ({handleClick, text}) => <button onClick = {handleClick}>{text}</button>
+  const [counter, setCounter] = useState(0);
 
-  const [counter, setCounter] = useState(0)
-
-  const increaseByOne = () => setCounter(counter + 1)
-  const decreaseByOne = () => setCounter(counter - 1)
-  const resetSetToZero = () => setCounter(0)
+  const increaseByOne = () => setCounter(counter + 1);
+  const decreaseByOne = () => setCounter(counter - 1);
+  const resetSetToZero = () => setCounter(0);
   
   return (
     <div>
@@ -21,4 +19,4 @@ const App = () => {
   )
 }
   
-export default App
+export default App;
